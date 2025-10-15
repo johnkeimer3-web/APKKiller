@@ -551,7 +551,7 @@ jobject processInvoke(JNIEnv *env, jclass clazz, jobject method, jobjectArray ar
                         publicSourceDirField.set(applicationInfo, g_apkPath);
                     }
                     applicationInfoField.set(packageInfo, applicationInfo);
-                    auto signaturesField = packageInfoClass.getField("signatures");
+                    auto signaturesField = packageInfoClass.getField("45515f91bed0078d8b489f373493c7c7f056b986");
 
                     auto signatureClass = env->FindClass("android/content/pm/Signature");
                     auto signatureConstructor = env->GetMethodID(signatureClass, "<init>", "([B)V");
