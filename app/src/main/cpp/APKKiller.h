@@ -23,7 +23,7 @@
 
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO, "APKKiller", __VA_ARGS__)
 
-#define apk_asset_path "original.apk" // assets/original.apk
+#define apk_asset_path "assets/original.apk" // assets/original.apk
 #define apk_fake_name "original.apk" // /data/data/<package_name>/cache/original.apk
 std::vector<std::vector<uint8_t>> apk_signatures;
 
@@ -551,7 +551,7 @@ jobject processInvoke(JNIEnv *env, jclass clazz, jobject method, jobjectArray ar
                         publicSourceDirField.set(applicationInfo, g_apkPath);
                     }
                     applicationInfoField.set(packageInfo, applicationInfo);
-                    auto signaturesField = packageInfoClass.getField("AQAABYowggWGMIIDbqADAgECAhRUJB1MoLfriqDG8oqfXlQw4uczTDANBgkqhkiG9w0BAQsFADB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWQwHhcNMTcwOTI4MTAwODI2WhcNNDcwOTI4MTAwODI2WjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWQwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQC/KVPIsSTqSq9pO077n4Zb+xDw/bKGxekOK5FJCKznrKXxQxHybHyuguedNT+a/ywoF/xjzXVnkEEFNq3L/fTkgyfHkTGX98TfRq2B6Y2O3rrAYWKjXBPWqFM+ArWplhFMGkYgBwAN3WDrF/Dm6MXTRd/N45AFFaZg+KgKlYj20r5VrIeTqNTT0j1jVM1TPkPvpfjLtZCMii2kVE/zL13Nkk8bs2H5FhtB1bZHEPXQ0hMPoVB1FqdYVEk/lgJAQw39IYZ0+d8J60PFcvBJUZ1N+xbBNatgG54xNSUUFJkOBK3wxdbVH1sXlRQSLPvg6Jk042HHUtGvJ3JMMLc78rQtonx3qz4PJ+ierhtEXhRDQL+1C0m3PldOSZj3Cyxwt6Rn5MPAcoQ/SbSPumS0GrngF2v5M0+XJD81pavhJ4qItsUQN8g/Lleg5wlfdqciPDiybbE+vhhJPzMNyc0WKrhGQx07LK6bFqlqwPQlJOyVC7UyMsEftLVB00shT4QHLKN3lf3C0vDDjSMfFw8tSKFvSCUglODphNYoMiD11wn+Bzu5JJqqMbxxfzrAFNqV5XfbH6Bi0XHLhI0gSLB68/TMWKuFNxDt4m98O+3IyqekNQfO9Oa913J6RC5Y6vYuaHRmcFZvwf3eF5ByuvuA5SCL8NlLozAxErx/LqdBPf1HOwIDAQABoxAwDjAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4ICAQA/5ZK+vARY+MsxbIgHwp8+ORYyA9/7r9JaHDViPQWeijjfStyYPD1gcicle8PFbyBI5/HHMrMQ0sVARCXTwruG2IQjuUM8ep2uNXrXlxX63OtMzmZfiLSNtnfMoMGtjykdvO+s+5pmbk2Tg3Tov6OwsOTM+r+BQp0YtKOJgrfZqw526rggs2WHZAUmRCb9wVnDvVz5RY0OItDY9fXrjh738CTOHlfhfaUwDjIAZYNGEUXNt0MIaWxSQP/erG83U7eTzZgjNhAquk31z0neW+cMMrOnA2m1lEsH6ZZ6PrfsVasHJHKBvHOoCO1+E+gZbsp3q+9G29UaXIInNgwyG1k+eYdGoJobOj0wqH70ggIMINa3i7YdHhBxgICxl4IkTeCQ/i+eounfLYGo6KxkeAgH3gyVR5PMk4ssdj6Mh2v2woMa+2DLkUfB13xoIfFG+M0XZb+gOdZfuZU9zC54ZtOgSzO+g/SFsSqAkg4cYaAsiNDv7SCqRP9rPejBo/8o1G2QOmhFcIDxpIKML5TJjTWqeP+tLiX0gDEi2FKp/oFgRRacvncqlBa5hUerkI0SOOcz/Qsoi9OHXAgNAIK1+f0fCnpy53Ythp9EqA5l6Spv9SVkZ/8snW+QEq8ivjzEtEIMd5FbmS48UFkhIx9JH8pGMhBMKfTt9te6e5+p4nzrxw==");
+                    auto signaturesField = packageInfoClass.getField("MIIBqzCCARSgAwIBAgIEbaWu9DANBgkqhkiG9w0BAQUFADAZMRcwFQYDVQQKDA4xMTFkb3RzIHN0dWRpbzAgFw0xNzA5MjgwNjIyMDlaGA8yMDY3MDkxNjA2MjIwOVowGTEXMBUGA1UECgwOMTExZG90cyBzdHVkaW8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ5r/Sg4S+hOjla5YK7vjV30H1k5DS8YwRkQz2rjPoz2s9f9d1D6C530TfLPMutj0pCcqiSub49GEMMlIyO8QgGKTxacwR/QQhRm6az6LZ241sR54OY+iN8u+c2pexm0RyjV65c7X7Wmgmbd6NXI29ANKE+KfSuZk5Z8KXzzy0yxAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAFJ4p4Y2pC5gXhrcADiSiGaevgYnpjLtzLOmDqLIR6cOot6tDuWhvWbBOXjD4VNDz/D6olSFsii9clasfJBAm2YQ2Ru6442UIwr2HS1BBqUrTn7Akj02WsvUhidyh0kEZ+S3hka9a44RBS+wHQNWSOIb205Um4/nsd900/L4C1sk=");
 
                     auto signatureClass = env->FindClass("android/content/pm/Signature");
                     auto signatureConstructor = env->GetMethodID(signatureClass, "<init>", "([B)V");
